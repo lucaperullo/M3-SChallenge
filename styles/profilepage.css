@@ -1,0 +1,69 @@
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+#navbar {
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+  i {
+    color: white;
+  }
+  .box {
+    display: flex;
+  }
+  .navs {
+    display: flex;
+  }
+  .navbar {
+   background-color: #141414;
+  }
+  nav {
+    top: 0;
+    position: fixed !important;
+    width: 100%;
+  }
+  #active {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  a {
+    color: white !important;
+  }
+  a:hover {
+    color: #b3b3b3 !important;
+    cursor: pointer;
+  }
+  li {
+    font-size: 12px;
+    margin-left: 22px;
+  }
+
+#editProfile{
+    max-width: 60vw;
+    margin-top: 8rem;
+}
+
+button.btn-outline-dark {
+    width: 100%;
+    display: inline-block;
+    color: white;
+}
+
+button.btn-outline-light {
+    width: 100%;
+    display: inline-block;
+}
+
+#inputLanguage {
+    width: 7rem !important;
+}
+
+span{
+    background-color: #546471;
+    color: #141414;
+    font-size: 0.5rem;
+    font-weight: 400;
+}

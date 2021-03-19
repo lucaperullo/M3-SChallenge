@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+    <title>Netflix</title>
+  </head>
+  <body onscroll="navColorOnScroll()">
+    <nav class="navbar">
+      <div id="navbar" class="container-fluid">
+        <img
+          class="logo"
+          src="https://logos-download.com/wp-content/uploads/2016/03/Netflix_logo.png"
+          height="25px"
+        />
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="box">
+            <li class="nav-item">
+              <a id="active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a>TV Show</a>
+            </li>
+            <li class="nav-item"><a>Movies</a></li>
+            <li class="nav-item"><a>New & Popular</a></li>
+            <li class="nav-item"><a>My list</a></li>
+            <li class="nav-item"><a>Watch again</a></li>
+          </div>
+        </ul>
+        <div class="box">
+          <ul class="nav">
+            <li class="nav-item"><i class="fas fa-search"></i></li>
+            <li class="nav-item"><a>KIDS</a></li>
+            <li class="nav-item"><i class="fas fa-gift"></i></li>
+            <li class="nav-item">
+              <a href="/settings.html"><i class="fas fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a href="/profile.html">
+                <img src="./imgs/user.png" height="30" alt="" class="rounded"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="main-content" class="container-fluid">
+      <video autoplay loop muted src="./video/video.mp4"></video>
+
+      <div class="wrapperr">
+        <img
+          src="https://occ-0-2638-778.1.nflxso.net/dnm/api/v6/LmEnxtiAuzezXBjYXPuDgfZ4zZQ/AAAABXX0rdhMJRM-N9GF5SnW40j7TuFGaZyiLwV7CNA895GE1eocr1pr0pvDU_txhRBtH1Lye1SBr90a9v2sdsKIA6QxkvVYpTFUYQFWSV6BWfhzI89g-6QlFuAXLdL7K9R7qT84S7FMiwLNnbIsvOl15fj_cve72wNTOvd0q4IyGELgcg.webp?r=b07"
+        />
+        <h4 class="h4">Watch Season 1 Now</h4>
+        <p class="p">
+          Some seek power.Others seek answers<br />.As a dark cloud casts a
+          pall<br />
+          over the continent,what's left to salvege?
+        </p>
+      </div>
+      <div id="body" class="conatiner">
+        <h2 id="active">Popular on Netflix</h2>
+        <div id="splide" class="splide">
+          <div class="splide__track">
+            <ul id="splide-list-1" class="splide__list"></ul>
+          </div>
+        </div>
+        <h2 id="active">Tranding Now</h2>
+        <div id="splide-2" class="splide">
+          <div class="splide__track">
+            <ul id="splide-list-2" class="splide__list"></ul>
+          </div>
+        </div>
+        <h2 id="active">TV Shows</h2>
+        <div id="splide-3" class="splide">
+          <div class="splide__track">
+            <ul id="splide-list-3" class="splide__list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script src="splide.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

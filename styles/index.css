@@ -1,0 +1,116 @@
+* {
+  transition: 0.25s ease;
+  font-family: "Martel Sans", sans-serif;
+}
+
+#active {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#main-content {
+  padding: 0 !important;
+  background-color: #141414;
+}
+video {
+  margin-top: -150px;
+  z-index: -1;
+  width: 100%;
+  transition: none;
+}
+a {
+  color: white !important;
+}
+a:hover {
+  color: #b3b3b3 !important;
+  cursor: pointer;
+}
+.logo {
+  padding-left: -100px;
+}
+#navbar {
+  margin-left: 35px;
+  margin-top: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item {
+  font-size: 12px;
+  margin-left: 22px;
+}
+body {
+  background-color: #141414;
+}
+i {
+  color: white;
+  cursor: pointer;
+}
+.box {
+  display: flex;
+}
+.navs {
+  display: flex;
+}
+.navbar {
+  z-index: 2;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.4902836134453782) 53%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+body {
+  overflow-x: hidden;
+}
+nav {
+  top: 0;
+  position: fixed !important;
+  width: 100%;
+}
+
+.h4 {
+  font-weight: 700 !important;
+  font-size: 31px !important;
+}
+.p {
+  font-size: 20px;
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #141414;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+#body {
+  background: rgb(20, 20, 20);
+  background: linear-gradient(
+    0deg,
+    rgba(20, 20, 20, 1) 51%,
+    rgba(20, 20, 20, 0.5927675898203593) 68%,
+    rgba(20, 20, 20, 0) 100%
+  );
+  position: relative;
+  top: -530px;
+}
+h2 {
+  color: white;
+  font-size: 20px !important;
+  margin-left: 30px;
+  margin-top: 20px !important;
+}
+.wrapperr {
+  position: relative;
+  top: -550px;
+  left: 50px;
+  color: white;
+  width: 100%;
+}
