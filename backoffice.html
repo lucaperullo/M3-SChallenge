@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My list admin</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="icon"
+      href="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/227_Netflix_logo-512.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/backoffice.css" />
+  </head>
+
+  <body onscroll="navColorOnScroll()">
+    <nav class="navbar">
+      <div id="navbar" class="container-fluid">
+        <img
+          class="logo"
+          src="https://logos-download.com/wp-content/uploads/2016/03/Netflix_logo.png"
+          height="25px"
+        />
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="box">
+            <li class="nav-item">
+              <a href="index.html" id="active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a>TV Show</a>
+            </li>
+            <li class="nav-item"><a>Movies</a></li>
+            <li class="nav-item"><a>New & Popular</a></li>
+            <li class="nav-item"><a>My list</a></li>
+            <li class="nav-item"><a>Watch again</a></li>
+          </div>
+        </ul>
+        <div class="box">
+          <ul class="nav">
+            <li class="nav-item"><i class="fas fa-search"></i></li>
+            <li class="nav-item"><a>KIDS</a></li>
+            <li class="nav-item"><i class="fas fa-gift"></i></li>
+            <li class="nav-item">
+              <a href="/settings.html"><i class="fas fa-bell"></i></a>
+            </li>
+            <li class="nav-item">
+              <a href="/profile.html">
+                <img src="./imgs/user.png" height="30" alt="" class="rounded"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="dashboard" class="py-5">
+      <div class="container">
+        <h1 class="font-weight-bold">Dashboard</h1>
+        <div class="row mt-5 mb-4">
+          <div class="col-12 col-md-6 mb-4 mb-md-0">
+            <div class="dashboard-panel full-height">
+              <h3 class="font-weight-bold mb-4">Add Show</h3>
+              <form id="add-show-form" onsubmit="postShow(event)">
+                <div class="form-group">
+                  <label for="inputShowName">Show Name*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputShowName"
+                    aria-describedby="showName"
+                    placeholder="Enter name of the show..."
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputShowDescription">Show Description</label>
+                  <textarea
+                    class="form-control"
+                    id="inputShowDescription"
+                    rows="3"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="inputGenre" class="d-block">Genre*</label>
+                  <select
+                    class="form-control w-50"
+                    name="genres"
+                    id="inputGenre"
+                  >
+                    <option value="" disabled selected>Select Genre...</option>
+                    <option>Action</option>
+                    <option>Action-Comedy</option>
+                    <option>Adventure</option>
+                    <option>Animation</option>
+                    <option>Anime</option>
+                    <option>Comedy</option>
+                    <option>Comedy-Romance</option>
+                    <option>Crime</option>
+                    <option>Drama</option>
+                    <option>Fantasy</option>
+                    <option>Horror</option>
+                    <option>Mystery</option>
+                    <option>Romance</option>
+                    <option>Sci-Fi</option>
+                    <option>Superhero</option>
+                    <option>Thriller</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="inputShowImageUrl">Show Image URL*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputShowImageUrl"
+                    aria-describedby="showImage"
+                    placeholder="Enter Image URL...."
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="dashboard-panel mb-4">
+              <h3 class="font-weight-bold mb-4">Remove Show</h3>
+              <form id="remove-show-form" onsubmit="deleteShow(event)">
+                <div class="form-group">
+                  <label for="inputShowID">Show ID*</label>
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    id="inputShowID"
+                    aria-describedby="showID"
+                    placeholder="Enter ID..."
+                    required
+                  />
+                  <small>Paste ID from below table.</small>
+                </div>
+                <button type="submit" class="btn btn-danger mt-3">
+                  Submit
+                </button>
+              </form>
+            </div>
+            <div class="dashboard-panel">
+              <h3 class="font-weight-bold mb-4">Edit Show</h3>
+              <form id="edit-show-form" onsubmit="editShow(event)">
+                <div class="form-group">
+                  <label for="inputShowID-edit">Show ID*</label>
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    id="inputShowID-edit"
+                    aria-describedby="showID"
+                    placeholder="Enter ID..."
+                    onchange="findGenre()"
+                    required
+                  />
+                  <small>Paste ID from below table.</small>
+                </div>
+                <div class="form-group">
+                  <label for="inputShowGenre-edit">Show Genre*</label>
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    id="inputShowGenre-edit"
+                    aria-describedby="showGenre"
+                    required
+                    disabled
+                  />
+                  <small>This field will autofill after entering an ID.</small>
+                </div>
+                <button
+                  id="edit-btn"
+                  type="submit"
+                  class="btn btn-warning mt-3"
+                >
+                  Edit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="dashboard-panel">
+              <h3 class="font-weight-bold d-inline-block mr-4 mb-4">
+                Show Summary
+              </h3>
+              <select
+                class="form-control filter-select d-inline-block"
+                name="genres-filter"
+                id="filterBy-genre"
+                onchange="fetchCategories()"
+              >
+                <option value="" disabled selected>Filter By Genre...</option>
+                <option>All Movies</option>
+                <option>Action</option>
+                <option>Action-Comedy</option>
+                <option>Adventure</option>
+                <option>Animation</option>
+                <option>Anime</option>
+                <option>Comedy</option>
+                <option>Comedy-Romance</option>
+                <option>Crime</option>
+                <option>Drama</option>
+                <option>Fantasy</option>
+                <option>Horror</option>
+                <option>Mystery</option>
+                <option>Romance</option>
+                <option>Sci-Fi</option>
+                <option>Superhero</option>
+                <option>Thriller</option>
+              </select>
+              <table
+                id="summary-table-body"
+                class="table table-dark table-hover"
+              ></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div class="self-made-modal d-none">
+      <form id="add-product-form">
+        <div class="form-group">
+          <label for="modal-show-name">Show Name*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="modal-show-name"
+            aria-describedby="showName"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="modal-show-description">Show Description*</label>
+          <textarea
+            type="textarea"
+            class="d-block w-100"
+            id="modal-show-description"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="modal-show-genre" class="d-block">Genre*</label>
+          <select class="form-control w-50" name="genres" id="modal-show-genre">
+            <option disabled selected>Select Genre...</option>
+            <option>Action</option>
+            <option>Action-Comedy</option>
+            <option>Adventure</option>
+            <option>Animation</option>
+            <option>Anime</option>
+            <option>Comedy</option>
+            <option>Comedy-Romance</option>
+            <option>Crime</option>
+            <option>Drama</option>
+            <option>Fantasy</option>
+            <option>Horror</option>
+            <option>Mystery</option>
+            <option>Romance</option>
+            <option>Sci-Fi</option>
+            <option>Superhero</option>
+            <option>Thriller</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modal-product-img">Show Image URL*</label>
+          <input
+            type="text"
+            class="form-control"
+            id="modal-show-img"
+            aria-describedby="showImage"
+            required
+          />
+        </div>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          onclick="resetAllFields()"
+        >
+          Cancel
+        </button>
+        <a id="save-changes" class="btn btn-danger motherfkingbutton">
+          Save changes
+        </a>
+      </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="index.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

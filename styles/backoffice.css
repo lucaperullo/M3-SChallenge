@@ -1,0 +1,21 @@
+html {
+  background-image: url(https://cdn.mos.cms.futurecdn.net/98GnqFKaUMYU3GG5HxhLWZ.jpg);
+}
+body {
+  background-color: rgba(0, 0, 0, 0.788);
+}
+#dashboard {
+  background-color: rgba(0, 0, 0, 0.034);
+  color: white;
+}
+.self-made-modal {
+  backdrop-filter: blur(10px);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.835);
+  height: 500px;
+  padding: 50px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  right: 25%;
+}
